@@ -1,0 +1,37 @@
+type City {
+  name: String
+  superheroes: [Superhero]
+  symbol: String
+}
+
+"Mutation root"
+type Mutation {
+  createSuperhero(superhero: SuperheroInput): Superhero
+}
+
+"Query root"
+type Query {
+  "Get all cities."
+  allCities: [City]
+  "Get all superheroes."
+  allSuperheroes: [Superhero]
+  "Get a City."
+  city(cityId: Int!): City
+  "Get a super hero."
+  superhero(heroId: Int!): Superhero
+}
+
+type Superhero {
+  city: City
+  name: String
+}
+
+input CityInput {
+  name: String
+  symbol: String
+}
+
+input SuperheroInput {
+  city: CityInput
+  name: String
+}

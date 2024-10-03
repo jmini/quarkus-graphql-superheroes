@@ -9,6 +9,8 @@ The Schema is available from the running server:
 
     http://localhost:8080/graphql/schema.graphql
 
+It is also published in the git repository: [schema.graphql](schema.graphql)
+
 ## curl example
 
 ```shell script
