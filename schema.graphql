@@ -28,8 +28,20 @@ type Query {
 type Superhero {
   "The city where the superhero is based or operates"
   city: City
+  "The gender of the superhero"
+  gender: Gender
   "The name of the superhero"
   name: String
+}
+
+"Gender of a superhero"
+enum Gender {
+  "Female"
+  FEMALE
+  "Male"
+  MALE
+  "Not applicable or unknown"
+  NOT_APPLICABLE
 }
 
 "City where a superhero is located or operates"
@@ -44,6 +56,8 @@ input CityInput {
 input SuperheroInput {
   "The city where the superhero is based or operates"
   city: CityInput
+  "The gender of the superhero"
+  gender: Gender
   "The name of the superhero"
   name: String
 }

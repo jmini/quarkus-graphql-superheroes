@@ -54,6 +54,7 @@ allSuperheroes
 {
     allSuperheroes {
         name
+        gender
     }
 }
 ```
@@ -64,6 +65,7 @@ getSuperHero
 query getSuperhero {
     superhero(heroId: 0) {
         name
+        gender
     }
 }
 ```

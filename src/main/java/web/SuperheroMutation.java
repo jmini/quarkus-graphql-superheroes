@@ -17,7 +17,7 @@ public class SuperheroMutation {
 
     @Mutation
     public Superhero createSuperhero(@Name("superhero") Superhero superheroInput) {
-        var superhero = new Superhero(superheroInput.getName(), superheroInput.getCity());
+        var superhero = new Superhero(superheroInput.getName(), superheroInput.getGender(), superheroInput.getCity());
         superheroService.addSuperhero(superhero);
         return superhero;
     }
