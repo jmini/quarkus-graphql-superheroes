@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import jakarta.enterprise.context.ApplicationScoped;
 
 import model.City;
+import model.Gender;
 import model.Superhero;
 
 @ApplicationScoped
@@ -20,13 +21,16 @@ public class SuperheroService {
         var gothamCity = new City("Gotham City", "GC");
         cities.add(gothamCity);
 
-        var batman = new Superhero("Batman", gothamCity);
+        var batman = new Superhero("Batman", Gender.MALE, gothamCity);
         superheroes.add(batman);
+
+        var catwoman = new Superhero("Catwoman", Gender.FEMALE, gothamCity);
+        superheroes.add(catwoman);
 
         var newYorkCity = new City("New York City", "NYC");
         cities.add(newYorkCity);
 
-        var spiderMan = new Superhero("Spider Man", newYorkCity);
+        var spiderMan = new Superhero("Spider Man", Gender.MALE, newYorkCity);
         superheroes.add(spiderMan);
     }
 
