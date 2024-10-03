@@ -1,5 +1,8 @@
 package model;
 
+import org.eclipse.microprofile.graphql.Description;
+
+@Description("Representation of a Superhero")
 public class Superhero {
 
     public Superhero() {}
@@ -9,7 +12,10 @@ public class Superhero {
         this.city = city;
     }
 
+    @Description("The name of the superhero")
     private String name;
+
+    @Description("The city where the superhero is based or operates")
     private City city;
 
     public String getName() {

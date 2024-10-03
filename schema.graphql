@@ -1,6 +1,9 @@
+"City where a superhero is located or operates"
 type City {
+  "The name of the city"
   name: String
   superheroes: [Superhero]
+  "A short abbreviation or symbolic representation of the city"
   symbol: String
 }
 
@@ -21,17 +24,26 @@ type Query {
   superhero(heroId: Int!): Superhero
 }
 
+"Representation of a Superhero"
 type Superhero {
+  "The city where the superhero is based or operates"
   city: City
+  "The name of the superhero"
   name: String
 }
 
+"City where a superhero is located or operates"
 input CityInput {
+  "The name of the city"
   name: String
+  "A short abbreviation or symbolic representation of the city"
   symbol: String
 }
 
+"Representation of a Superhero"
 input SuperheroInput {
+  "The city where the superhero is based or operates"
   city: CityInput
+  "The name of the superhero"
   name: String
 }

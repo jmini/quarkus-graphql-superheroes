@@ -1,5 +1,8 @@
 package model;
 
+import org.eclipse.microprofile.graphql.Description;
+
+@Description("City where a superhero is located or operates")
 public class City {
 
     public City() {}
@@ -9,7 +12,10 @@ public class City {
         this.symbol = symbol;
     }
 
+    @Description("The name of the city")
     private String name;
+
+    @Description("A short abbreviation or symbolic representation of the city")
     private String symbol;
 
     public String getName() {
