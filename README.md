@@ -148,3 +148,8 @@ If you want to learn more about building native executables, please consult <htt
 ## Related Guides
 
 - SmallRye GraphQL ([guide](https://quarkus.io/guides/smallrye-graphql)): Create GraphQL Endpoints using the code-first approach from MicroProfile GraphQL
+
+## Related Work
+
+* Original project: https://github.com/claudioaltamura/quarkus-graphql-superheroes
+* Superheroes data: https://www.databasestar.com/sample-database-superheroes/
