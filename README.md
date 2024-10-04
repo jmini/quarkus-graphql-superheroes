@@ -51,10 +51,13 @@ query getCity {
 allSuperheroes
 
 ```graphql
-{
+query {
     allSuperheroes {
         name
         gender
+        city {
+             name
+        }
     }
 }
 ```
@@ -66,6 +69,17 @@ query getSuperhero {
     superhero(heroId: 0) {
         name
         gender
+      	abilities {
+          __typename
+          ...on Superpower {
+            name
+          }
+          ...on Attribute {
+            name
+            rating
+            motivation
+          }
+        }
     }
 }
 ```
@@ -79,7 +93,7 @@ query getCity {
         symbol
         superheroes {
             name
-            }
+        }
     }
 }
 ```

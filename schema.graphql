@@ -1,3 +1,16 @@
+"An ability that a superhero possesses, which can be either a superpower or a general attribute"
+union Ability = Attribute | Superpower
+
+"A general attribute that a superhero possesses"
+type Attribute {
+  "Explanation why the rating is given"
+  motivation: String
+  "Attribute name (e.g. intelligence, strength, speed ...) that describes a superhero"
+  name: String
+  "Value from 0-100 indicating their rating for that particular attribute"
+  rating: Int
+}
+
 "City where a superhero is located or operates"
 type City {
   "The name of the city"
@@ -26,11 +39,19 @@ type Query {
 
 "Representation of a Superhero"
 type Superhero {
+  "A list of abilities the superhero possesses, which can be superpowers or general attributes"
+  abilities: [Ability]
   "The city where the superhero is based or operates"
   city: City
   "The gender of the superhero"
   gender: Gender
   "The name of the superhero"
+  name: String
+}
+
+"A superpower that a superhero possesses"
+type Superpower {
+  "The name of the superpower that a superherow has"
   name: String
 }
 

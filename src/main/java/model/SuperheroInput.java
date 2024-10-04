@@ -1,19 +1,18 @@
 package model;
 
-import java.util.List;
-
 import org.eclipse.microprofile.graphql.Description;
+import org.eclipse.microprofile.graphql.Input;
 
+@Input("SuperheroInput")
 @Description("Representation of a Superhero")
-public class Superhero {
+public class SuperheroInput {
 
-    public Superhero() {}
+    public SuperheroInput() {}
 
-    public Superhero(String name, Gender gender, City city, List<Ability> abilities) {
+    public SuperheroInput(String name, Gender gender, City city) {
         this.name = name;
         this.gender = gender;
         this.city = city;
-        this.abilities = abilities;
     }
 
     @Description("The name of the superhero")
@@ -24,9 +23,6 @@ public class Superhero {
 
     @Description("The city where the superhero is based or operates")
     private City city;
-
-    @Description("A list of abilities the superhero possesses, which can be superpowers or general attributes")
-    private List<Ability> abilities;
 
     public String getName() {
         return name;
@@ -50,13 +46,5 @@ public class Superhero {
 
     public void setCity(City city) {
         this.city = city;
-    }
-
-    public List<Ability> getAbilities() {
-        return abilities;
-    }
-
-    public void setAbilities(List<Ability> abilities) {
-        this.abilities = abilities;
     }
 }
